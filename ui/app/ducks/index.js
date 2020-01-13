@@ -53,6 +53,11 @@ function rootReducer (state, action) {
 
   state.gas = reduceGas(state, action)
 
+  state.frequentRpcListDetail = [
+    { nickname: 'Test Ethereum Network(Elastos)', rpcPrefs: {}, rpcUrl: 'https://rpc.elaeth.io', ticker: 'ELA' },
+    { nickname: 'Main Ethereum Network(Elastos)', rpcPrefs: {}, rpcUrl: 'https://mainrpc.elaeth.io', ticker: 'ELA' },
+  ]
+
   window.METAMASK_CACHED_LOG_STATE = state
   return state
 }
